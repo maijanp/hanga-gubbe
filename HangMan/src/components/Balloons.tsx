@@ -1,6 +1,10 @@
 import './Balloons.css'
-
+import { useState } from 'react';
 export const Balloons = () => {
+  const [clickedBalloon, setClickedBallon] = useState("")
+  const handleClick = (e:any) => {
+    setClickedBallon(e.target.value)
+  }
   const alphabet = [
     "a",
     "b",
@@ -36,7 +40,7 @@ export const Balloons = () => {
 
 return(
   <div className="balloon">
-    {alphabet.map((word) => {return <div>word</div>})}
+    {alphabet.map((word) => {return <div className='box' key={word} onClick={handleClick}>{word.toUpperCase()}</div>})}
   </div>
 
 )

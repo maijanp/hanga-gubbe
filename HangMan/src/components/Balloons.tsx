@@ -1,3 +1,5 @@
+import './Balloons.css'
+
 export const Balloons = () => {
   const alphabet = [
     "a",
@@ -30,7 +32,14 @@ export const Balloons = () => {
     "ä",
     "ö",
   ];
-  return alphabet.map((bokstav) => {
-    return <div className="flex"><div>{bokstav}</div></div>
-  })
+  
+
+return(
+  <div className="balloon">
+    {alphabet.map((word) => {return <div>word</div>})}
+  </div>
+
+)
+
+  
 };

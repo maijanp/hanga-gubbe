@@ -1,0 +1,6 @@
+.balloon {
+    display:flex;
+    height: 50px;
+    width: 50px;
+    border: 10px;
+}
